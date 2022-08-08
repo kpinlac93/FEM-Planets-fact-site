@@ -1,0 +1,225 @@
+* {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* Shared */
+body {
+    background-color: #070724;
+    background-image: url("assets/background-stars.svg");
+    height: 92vh;
+}
+a {
+    text-decoration: none;
+}
+.underline {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.527);
+}
+ul {
+    list-style: none;
+}
+.hidden {
+    visibility: hidden;
+    position: fixed;
+}
+h1, h2, h3, h4 {
+    font-family: 'Antonio', sans-serif;
+}
+h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h3 {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2.6px;
+}
+p, article, li, footer {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 14px;
+}
+
+
+/* Specific Planet */
+.mercury-article .active {
+    background-color: #419EBB;
+}
+.mercury .geology {
+    margin-top: -100px;
+}
+.venus {
+    margin: 15vh 15vh;
+}
+.venus-article .active {
+    background-color: #EDA249;
+}
+.earth {
+    margin: 10vh 15vh;
+}
+.earth-article .active {
+    background-color: #6D2ED5;
+}
+.mars-article .active {
+    background-color: #D14C32;
+}
+.jupiter {
+    margin: 5vh 10vh;
+}
+.jupiter-article .active {
+    background-color: #D83A34;
+}
+.jupiter .geology {
+    margin-top: -350px;
+}
+.saturn {
+    margin: 0vh 5vh;
+}
+.saturn-article .active {
+    background-color: #CD5120;
+}
+.saturn .geology {
+    margin-top: -450px;
+}
+.uranus {
+    margin: 10vh 15vh;
+}
+.uranus-article .active {
+    background-color: #1EC1A2;
+}
+.neptune {
+    margin: 10vh 15vh;
+}
+.neptune-article .active {
+    background-color: #2D68F0;
+}
+
+
+/* Desktop */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 20px 0px;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+    align-items: center;
+    user-select: none;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+nav ul,
+nav h2 {
+    margin: 0 30px;
+}
+nav h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+nav ul li {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+main {
+    margin-top: 50px;
+    margin: 50px 10vw;
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+figure {
+    margin: 20vh 20vh;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+.geology {
+    width: 50%;
+    height: auto;
+    margin-top: -150px;
+}
+.flex {
+    display: flex;
+    flex-basis: auto;
+    height: 70vh;
+}
+aside {
+    display: flex;
+    justify-content: space-between;
+}
+section {
+    padding: 8vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+article {
+    letter-spacing: 0.5px;
+    line-height: 1.3em;
+    color: rgba(255, 255, 255, 0.89);
+    font-size: 1em;
+}
+.inactive:hover {
+    background-color: #d8d8d844;
+}
+.article-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    user-select: none;
+}
+.article-nav div {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    padding: 15px;
+}
+.sect-num {
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.466);
+}
+.article-nav p {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+section footer {
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.527);
+}
+aside {
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-content: space-between;
+    gap: 2%;
+    margin-bottom: 10px;
+}
+aside div {
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    padding: 20px;
+}
+aside div p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+aside div h2 {
+    text-transform: uppercase;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Planets fact site</title>
+</head>
+<body>
+
+
+  
+  <nav>
+    <h2>THE PLANETS</h2>
+    <ul>
+      <a href="index.html">
+        <li>mercury</li>
+      </a>
+      <a href="venus.html">
+        <li>venus</li>
+      </a>
+      <a href="earth.html">
+        <li>earth</li>
+      </a>
+      <a href="mars.html">
+        <li>mars</li>
+      </a>
+      <a href="jupiter.html">
+        <li>jupiter</li>
+      </a>
+      <a href="saturn.html">
+        <li>saturn</li>
+      </a>
+      <a href="uranus.html">
+        <li>uranus</li>
+      </a>
+      <a href="neptune.html">
+        <li>neptune</li>
+      </a>
+    </ul>
+  </nav>
+
+
+
+  <main>
+
+    <div class="flex">
+    <figure class="mars">
+      <img src="assets/planet-mars.svg" alt="Mars" class="overview">
+      <img src="assets/planet-mars-internal.svg" alt="Mars's Internal" class="internal hidden">
+      <img src="assets/geology-mars.png" alt="Mars's Geology" class="geology hidden">
+    </figure>
+
+
+    <section  class="mars-article">
+      <header><h1>MARS</h1></header>
+      <div>
+        <article class="article-01">
+          Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".
+        </article>
+        <article class="article-02 hidden">
+          Like Earth, Mars has differentiated into a dense metallic core overlaid by less dense materials. Scientists initially determined that the core is at least partially liquid. Current models of its interior imply a core consisting primarily of iron and nickel with about 16–17% sulfur.
+        </article>
+        <article class="article-03 hidden">
+          Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.
+        </article>
+        <footer>Source: <a href=""><span class="underline">Wikipedia</span> <img src="assets/icon-source.svg" alt=""></a></footer>
+      </div>
+      <ul class="article-nav">
+        <div class="nav-01 active">
+          <p class="sect-num">01</p>
+          <p class="sect-title">OVERVIEW</p>
+        </div>
+        <div class="nav-02 inactive">
+          <p class="sect-num">02</p>
+          <p class="sect-title">Internal Structure</p>
+        </div>
+        <div class="nav-03 inactive">
+          <p class="sect-num">03</p>
+          <p class="sect-title">Surface Geology</p>
+        </div>
+      </ul>
+    </section>
+    </div>
+
+
+    <aside>
+      <div>
+        <p>ROTATION TIME</p>
+        <h2>1.03 days</h2>
+      </div>
+      <div>
+        <p>REVOLUTION TIME</p>
+        <h2>1.88 years</h2>
+      </div>
+      <div>
+        <p>radius</p>
+        <h2>3,389.5 km</h2>
+      </div>
+      <div>
+        <p>AVERAGE TEMP.</p>
+        <h2>−28°c</h2>
+      </div>
+    </aside>
+
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
