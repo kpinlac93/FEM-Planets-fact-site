@@ -23,6 +23,9 @@ function removeActive() {
     nav01.classList.remove("active");
     nav02.classList.remove("active");
     nav03.classList.remove("active");
+    nav01.classList.remove("inactive");
+    nav02.classList.remove("inactive");
+    nav03.classList.remove("inactive");
 }
 function toggleArticle01() {
     removeActive()
