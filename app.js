@@ -1,3 +1,4 @@
+// Debugging
 fetch("./data.json")
 .then(response => {
    return response.json();
@@ -36,6 +37,10 @@ function normalizeMenu() {
 }
 
 
+
+
+
+// Planets Navigation
 var currentIndex = null;
 function handlePlanetData(planetIndex) {
     clearActiveState()
@@ -61,6 +66,9 @@ function handlePlanetData(planetIndex) {
     });
 }
 
+
+
+// Content Nav
 function clearActiveState() {
     for (let i = 0; i < articleNav.length; i++) {
         articleNav[i].classList.remove("main-content__nav-item--active")
@@ -69,8 +77,6 @@ function clearActiveState() {
 function addActiveState(num) {
     articleNav[num].classList.add("main-content__nav-item--active");
 }
-
-
 function change2Overview() {
     if (currentIndex == null) {
         return;
@@ -106,11 +112,6 @@ function change2Structure() {
         img.classList.remove("hidden");
     });
 }
-
-
-
-
-
 function change2Geology() {
     if (currentIndex == null) {
         return;
