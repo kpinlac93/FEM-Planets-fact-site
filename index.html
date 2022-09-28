@@ -8,111 +8,113 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
 
-
-  
-  <nav>
-    <h2>THE PLANETS</h2>
-    <ul>
-      <a href="index.html">
-        <li>mercury</li>
+  <nav class="navigation">
+    <p class="navigation__logo">The Planets</p>
+    <ul class="navigation__links">
+      <a href="javascript:handlePlanetData(0)">
+        <li>Mercury</li>
       </a>
-      <a href="venus.html">
-        <li>venus</li>
+      <a href="javascript:handlePlanetData(1)">
+        <li>Venus</li>
       </a>
-      <a href="earth.html">
-        <li>earth</li>
+      <a href="javascript:handlePlanetData(2)">
+        <li>Earth</li>
       </a>
-      <a href="mars.html">
-        <li>mars</li>
+      <a href="javascript:handlePlanetData(3)">
+        <li>Mars</li>
       </a>
-      <a href="jupiter.html">
-        <li>jupiter</li>
+      <a href="javascript:handlePlanetData(4)">
+        <li>Jupiter</li>
       </a>
-      <a href="saturn.html">
-        <li>saturn</li>
+      <a href="javascript:handlePlanetData(5)">
+        <li>Saturn</li>
       </a>
-      <a href="uranus.html">
-        <li>uranus</li>
+      <a href="javascript:handlePlanetData(6)">
+        <li>Uranus</li>
       </a>
-      <a href="neptune.html">
-        <li>neptune</li>
+      <a href="javascript:handlePlanetData(7)">
+        <li>Neptune</li>
       </a>
     </ul>
   </nav>
 
 
-
-  <main>
-
-    <div class="flex">
-    <figure class="mercury">
-      <img src="assets/planet-mercury.svg" alt="Mercury" class="overview">
-      <img src="assets/planet-mercury-internal.svg" alt="Mercury's Internal" class="internal hidden">
-      <img src="assets/geology-mercury.png" alt="Mercury's Geology" class="geology hidden">
-    </figure>
-
-
-    <section class="mercury-article">
-      <div>
-      <header><h1>MERCURY</h1></header>
-        <article class="article-01">
-          Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.
-        </article>
-        <article class="article-02 hidden">
-          Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density.
-        </article>
-        <article class="article-03 hidden">
-          Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.
-        </article>
-        <footer>Source: <a href=""><span class="underline">Wikipedia</span> <img src="assets/icon-source.svg" alt=""></a></footer>
+  <section class="main-content">
+    <img class="main-content__img" src="" alt="">
+    <div class="main-content__img-geology hidden">
+      <div class="main-content__img-geology-container">
+        <img class="main-content__img-geology-planet" src="assets/planet-earth.svg" alt="">
+        <img class="main-content__img-geology-pop" src="assets/geology-earth.png" alt="">
       </div>
-      <ul class="article-nav">
-        <div class="nav-01 active">
-          <p class="sect-num">01</p>
-          <p class="sect-title">OVERVIEW</p>
-        </div>
-        <div class="nav-02 inactive">
-          <p class="sect-num">02</p>
-          <p class="sect-title">Internal Structure</p>
-        </div>
-        <div class="nav-03 inactive">
-          <p class="sect-num">03</p>
-          <p class="sect-title">Surface Geology</p>
-        </div>
-      </ul>
-    </section>
     </div>
+    <div class="main-content__articles">
+      <h1 class="main-content__header"></h1>
+      <p class="main-content__articles-desc">
+        
+      </p>
+      <p class="main-content__src">
+        Source: <a href="">Wikipedia</a> <img src="assets/icon-source.svg" alt="">
+      </p>
+      <ul class="main-content__nav">
+        <li class="main-content__nav-item" onclick="change2Overview()">
+          <p class="main-content__nav-item-num">01</p>
+          <p class="main-content__nav-item-header">Overview</p>
+        </li>
+        <li class="main-content__nav-item" onclick="change2Structure()">
+          <p class="main-content__nav-item-num">02</p>
+          <p class="main-content__nav-item-header">Internal Structure</p>
+        </li>
+        <li class="main-content__nav-item" onclick="change2Geology()">
+          <p class="main-content__nav-item-num">03</p>
+          <p class="main-content__nav-item-header">Surface Geology</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
 
-    <aside>
-      <div>
-        <p>ROTATION TIME</p>
-        <h2>58.6 days</h2>
-      </div>
-      <div>
-        <p>REVOLUTION TIME</p>
-        <h2>87.97 days</h2>
-      </div>
-      <div>
-        <p>radius</p>
-        <h2>2,439.7 km</h2>
-      </div>
-      <div>
-        <p>AVERAGE TEMP.</p>
-        <h2>430°c</h2>
-      </div>
-    </aside>
+  <section class="stats">
+    <div class="stats__card">
+      <p class="stats__card-header" id="rota">
+        Rotation Time
+      </p>
+      <p class="stats__card-stat">
+        0 days
+      </p>
+    </div>
+    <div class="stats__card">
+      <p class="stats__card-header">
+        Revolution time
+      </p>
+      <p class="stats__card-stat" id="revo">
+        0 days
+      </p>
+    </div>
+    <div class="stats__card">
+      <p class="stats__card-header">
+        radius
+      </p>
+      <p class="stats__card-stat" id="radius">
+        0 km
+      </p>
+    </div>
+    <div class="stats__card">
+      <p class="stats__card-header">
+        average temp
+      </p>
+      <p class="stats__card-stat" id="temp">
+        0°C
+      </p>
+    </div>
+  </section>
 
-  </main>
 
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

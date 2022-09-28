@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+    font-family: 'Antonio', sans-serif;
+}
+html {
+    background: #070724 url("assets/background-stars.svg");
+}
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    align-items: center;
+
+    &__logo {
+        text-transform: uppercase;
+        margin: 30px;
+        font-size: 1.5em;
+    }
+
+    &__links {
+        display: flex;
+        margin: 30px;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+        }
+        li {
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8em;
+            letter-spacing: 0.05em;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+}
+
+.main-content {
+    margin: 5vh 5vw 5vh 5vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 60% auto;
+
+    &__img {
+        align-self: center;
+        justify-self: center;
+        max-width: 460px;
+        max-height: 460px;
+        z-index: 0;
+        display: flex;
+
+        &-geology {
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            max-height: 460px;
+
+            &-pop {
+                width: 326px;
+                height: 398px;
+                margin-top: -30vh;
+            }
+            &-planet {
+                max-width: 460px;
+                max-height: 460px;
+            }
+            &-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    &__articles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        grid-column-start: 2;
+        grid-row-start: 1;
+
+        h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+        }
+
+        &-desc {
+            line-height: 1.3em;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.85em;
+            letter-spacing: 0.1em;
+        }
+
+        a {
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    &__src {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-item {
+            display: flex;
+            border: 1px solid white;
+            padding: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8em;
+            cursor: pointer;
+
+            &-num {
+                margin: 0 20px;
+                color: rgba(255, 255, 255, 0.466);
+                font-family: 'Roboto', sans-serif;
+            }
+
+            &-header {
+                font-weight: bolder;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            &--active {
+                background: #419EBB;
+                border: 1px solid #419EBB;
+            }
+        }
+    }
+}
+
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 5vw;
+
+    &__card {
+        border: 1px solid white;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-header {
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        &-stat {
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+@media (max-width: 800px) and (min-width: 601px) {
+    nav {
+        flex-direction: column;
+        display: flex;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 5vh;
+
+        &__articles {
+            display: grid;
+            gap: 50px;
+            grid-template-rows: 4em auto auto;
+            grid-template-columns: auto auto;
+            &-desc {
+                grid-row-start: 2;
+                font-size: 0.8em;
+                line-height: 1.5em;
+            }
+        }
+        &__src {
+            grid-row-start: 3;
+        }
+
+        &__nav {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            justify-self: center;
+            align-self: center;
+
+        }
+    }
+    .stats {
+        margin-bottom: 5vh;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+
+
+    .navigation {
+
+        &__logo {
+            display: flex;
+            justify-content: space-between; 
+            width: 100%;
+            align-items: center;
+            pointer-events: none;
+            &::after {
+                display: inline-block;
+                content: " ";
+                background-image: url("assets/icon-hamburger.svg");
+                width: 24px;
+                height: 17px;
+                pointer-events: all;
+                cursor: pointer;
+            }
+        }
+
+        &__links {
+            display: none;
+            overflow: none;
+            z-index: 5;
+            position: fixed;
+            flex-direction: column;
+            background-color: #070724;
+            margin: 0;
+            top: 92px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            gap: 0;
+
+            a {
+                border-bottom: 1px solid white;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+
+                &:nth-child(1) li::before {
+                    background-color: #DEF4FC;
+                }
+                &:nth-child(2) li::before {
+                    background-color: #F7CC7F;
+                }
+                &:nth-child(3) li::before {
+                    background-color: #545BFE;
+                }
+                &:nth-child(4) li::before {
+                    background-color: #FF6A45;
+                }
+                &:nth-child(5) li::before {
+                    background-color: #ECAD7A;
+                }
+                &:nth-child(6) li::before {
+                    background-color: #FCCB6B;
+                }
+                &:nth-child(7) li::before {
+                    background-color: #65F0D5;
+                }
+                &:nth-child(8) li::before {
+                    background-color: #497EFA;
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    font-size: 1.3em;
+                    width: 100%;
+                    &::before {
+                        content: " ";
+                        background-color: white;
+                        border-radius: 50px;
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                    }
+                    &::after {
+                        content: " ";
+                        background: url("assets/icon-chevron.svg");
+                        border-radius: 50px;
+                        width: 6px;
+                        height: 8px;
+                        display: inline-block;
+                        margin-left: auto;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 92px;
+        text-align: center;
+        gap: 20px;
+        height: auto;
+
+        &__img {
+            margin: 0vh 0;
+            max-width: 100%;
+            max-height: 100%;
+
+            // &-geology {
+            //     display: unset;
+            // }
+        }
+
+        &__nav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 92px;
+            flex-direction: row;
+            justify-content: space-around;
+            border-bottom: 1px solid white;
+            padding-top: 7px;
+
+            &-item {
+                border: unset;
+                border-bottom: 7px solid rgba(0, 0, 0, 0);
+
+                &-num {
+                    display: none;
+                }
+
+                &--active {
+                    background-color: unset;
+                    border-bottom: 7px solid #419EBB;
+                }
+            }
+        }
+    }
+
+
+    .stats {
+        flex-direction: column;
+        margin-bottom: 5vh;
+
+        &__card {
+            width: auto;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
